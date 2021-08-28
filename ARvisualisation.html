@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <iframe src="http://127.0.0.1:3000/" frameborder="0"></iframe> -->
+    <a-scene embedded arjs fog stats webxr="requiredFeatures: hit-test,local-floor;
+      optionalFeatures: dom-overlay,unbounded;
+      overlayElement: #overlay;">
+        
+      <a-marker preset="hiro">
+        <!-- <a-assets>
+          <a-mixin id="text"
+            text="align: center; width: 6;
+                value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
+          ></a-mixin>
+        </a-assets> -->
+        <!-- <a-text mixin="text" position="-3 0 0" wrap-count="20"></a-text> -->
+        <a-entity position="0 0 0"
+            rotation="-90 -90 90"
+            obj-model="obj: url(./model/result_test_256.obj); 
+            obj: url(./model/result_test_256.obj)">
+            </a-entity>
+      </a-marker>
+
+      <!-- <a-entity
+        position="0 0 0"
+        scale="0.02 0.02 0.02"
+        rotation="0 0 0"
+        gltf-model="./scene.gltf"
+      ></a-entity> -->
+
+      <!-- "url(https://cdn.rawgit.com/KhronosGroup/glTF-Sample-Models/9176d098/1.0/Duck/glTF/Duck.gltf)" 
+      https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf-->
+      
+        <!-- <a-marker-camera type='pattern' url='./pattern-marker.patt'>
+            <a-entity 
+          obj-model="obj: url(./result_3-2-people-picture_256.obj); 
+          obj: url(./result_3-2-people-picture_256.obj)">
+          </a-entity>
+        </a-marker-camera> -->
+    <div style="height: 600px; width: 600px;">
+      <a-entity >
+        <a-camera>
+        </a-camera>
+      </a-entity>
+    </div>
+    
+  </a-scene>
+</body>
+</html>
